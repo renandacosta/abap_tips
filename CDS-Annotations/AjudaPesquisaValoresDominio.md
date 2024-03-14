@@ -1,7 +1,7 @@
 # CDS View com ajuda de pesquisa para valores fixo de domínio:
 
-Primeiro, deve-se cria uma CDS View que consuma a CDS View standard I_DomainFixedValueText.
-Adicionar na cláusula WHERE o nome do domínio que se deseja filtrar:
+Primeiro, deve-se cria uma CDS View que consuma a CDS View standard `I_DomainFixedValueText`.
+Adicionar na cláusula `WHERE` o nome do domínio que se deseja filtrar:
 
 ```
 @AbapCatalog.viewEnhancementCategory: [#NONE]
