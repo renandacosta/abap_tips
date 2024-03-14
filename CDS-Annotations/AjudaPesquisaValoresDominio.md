@@ -6,7 +6,7 @@ Adicionar na cláusula `WHERE` o nome do domínio que se deseja filtrar:
 ```abap
 @AbapCatalog.viewEnhancementCategory: [#NONE]
 @AccessControl.authorizationCheck: #NOT_REQUIRED
-@EndUserText.label: 'Depósito Padrão - Status'
+@EndUserText.label: 'Descrição da CDS view'
 @Search.searchable: true
 @ObjectModel.dataCategory: #VALUE_HELP
 @ObjectModel.usageType:{
@@ -14,7 +14,7 @@ Adicionar na cláusula `WHERE` o nome do domínio que se deseja filtrar:
     sizeCategory: #S,
     dataClass: #MIXED
 }
-define view entity ZVH_DEPOSITOPADRAO_STATUS
+define view entity ZVH_STATUS
   as select from I_DomainFixedValueText
 {
 
@@ -29,14 +29,14 @@ define view entity ZVH_DEPOSITOPADRAO_STATUS
       DomainText as Descricao
 
 }
-where  SAPDataDictionaryDomain = 'ZSTATUS' 
+where  SAPDataDictionaryDomain = 'ZNOME_DOMINIO' 
 ```
 
 Em seguida adicionar no campo que receberá a ajuda de pesquisa a anotação abaixo:
 
 ```abap
 @Consumption.valueHelpDefinition: [{
-       entity: {         name: 'ZVH_DEPOSITOPADRAO_STATUS',
+       entity: {         name: 'ZVH_STATUS',
                           element: 'Status'},
     useForValidation: true }
     ]         
