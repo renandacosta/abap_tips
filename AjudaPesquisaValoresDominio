@@ -1,0 +1,38 @@
+*** Criar uma CDS view com o filtro do nome do domínio: ***
+
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Depósito Padrão - Status'
+@Search.searchable: true
+@ObjectModel.dataCategory: #VALUE_HELP
+@ObjectModel.usageType:{
+    serviceQuality: #X,
+    sizeCategory: #S,
+    dataClass: #MIXED
+}
+define view entity ZVH_DEPOSITOPADRAO_STATUS
+  as select from I_DomainFixedValueText
+{
+
+      @Search.fuzzinessThreshold: 0.8
+      @Search.defaultSearchElement: true
+      @EndUserText.label: 'Status'
+  key DomainValue as Status,
+
+      @Search.fuzzinessThreshold: 0.8
+      @Search.defaultSearchElement: true
+      @EndUserText.label: 'Descrição'
+      DomainText as Descricao
+
+}
+where  SAPDataDictionaryDomain = 'ZSTATUS' 
+
+*********************************************************
+*** Usar a anotação abaixo no campo que recenerá a SH ***
+*********************************************************
+
+@Consumption.valueHelpDefinition: [{
+       entity: {         name: 'ZVH_DEPOSITOPADRAO_STATUS',
+                          element: 'Status'},
+    useForValidation: true }
+    ]         
