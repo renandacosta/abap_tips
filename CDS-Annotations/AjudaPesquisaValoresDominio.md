@@ -1,9 +1,9 @@
-# CDS View com ajuda de pesquisa para valores fixo de domínio:
+# CDS View com ajuda de pesquisa para valores fixos de domínio:
 
 Primeiro, deve-se cria uma CDS View que consuma a CDS View standard `I_DomainFixedValueText`.
 Adicionar na cláusula `WHERE` o nome do domínio que se deseja filtrar:
 
-```
+```abap
 @AbapCatalog.viewEnhancementCategory: [#NONE]
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Depósito Padrão - Status'
@@ -34,7 +34,7 @@ where  SAPDataDictionaryDomain = 'ZSTATUS'
 
 Em seguida adicionar no campo que receberá a ajuda de pesquisa a anotação abaixo:
 
-```
+```abap
 @Consumption.valueHelpDefinition: [{
        entity: {         name: 'ZVH_DEPOSITOPADRAO_STATUS',
                           element: 'Status'},
