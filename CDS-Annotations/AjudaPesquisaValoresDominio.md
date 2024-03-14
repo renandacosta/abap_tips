@@ -1,5 +1,6 @@
-*** Criar uma CDS view com o filtro do nome do domínio: ***
+# Criar uma CDS view com o filtro do nome do domínio:
 
+```
 @AbapCatalog.viewEnhancementCategory: [#NONE]
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Depósito Padrão - Status'
@@ -26,13 +27,14 @@ define view entity ZVH_DEPOSITOPADRAO_STATUS
 
 }
 where  SAPDataDictionaryDomain = 'ZSTATUS' 
+```
 
-*********************************************************
-*** Usar a anotação abaixo no campo que receberá a SH ***
-*********************************************************
+# Usar a anotação abaixo no campo que receberá a SH ***
 
+```
 @Consumption.valueHelpDefinition: [{
        entity: {         name: 'ZVH_DEPOSITOPADRAO_STATUS',
                           element: 'Status'},
     useForValidation: true }
     ]         
+```    
