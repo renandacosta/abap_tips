@@ -29,7 +29,7 @@ define view entity ZVH_DEPOSITOPADRAO_STATUS
 where  SAPDataDictionaryDomain = 'ZSTATUS' 
 ```
 
-# Usar a anotação abaixo no campo que receberá a SH ***
+# Usar a anotação abaixo no campo que receberá a SH
 
 ```
 @Consumption.valueHelpDefinition: [{
