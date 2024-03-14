@@ -1,4 +1,7 @@
-# Criar uma CDS view com o filtro do nome do domínio:
+# CDS View com ajuda de pesquisa para valores fixo de domínio:
+
+Primeiro, deve-se cria uma CDS View que consuma a CDS View standard I_DomainFixedValueText.
+Adicionar na cláusula WHERE o nome do domínio que se deseja filtrar:
 
 ```
 @AbapCatalog.viewEnhancementCategory: [#NONE]
@@ -29,7 +32,7 @@ define view entity ZVH_DEPOSITOPADRAO_STATUS
 where  SAPDataDictionaryDomain = 'ZSTATUS' 
 ```
 
-# Usar a anotação abaixo no campo que receberá a SH
+Em seguida adicionar no campo que receberá a ajuda de pesquisa a anotação abaixo:
 
 ```
 @Consumption.valueHelpDefinition: [{
