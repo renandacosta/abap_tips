@@ -3,7 +3,7 @@
 Primeiro, deve-se cria uma CDS View que consuma a CDS View standard `I_DomainFixedValueText`.
 Adicionar na cláusula `WHERE` o nome do domínio que se deseja filtrar:
 
-```abap
+```ABAP CDS
 @AbapCatalog.viewEnhancementCategory: [#NONE]
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Descrição da CDS view'
@@ -34,7 +34,7 @@ where  SAPDataDictionaryDomain = 'ZNOME_DOMINIO'
 
 Em seguida adicionar no campo que receberá a ajuda de pesquisa a anotação abaixo:
 
-```abap
+```ABAP CDS
 @Consumption.valueHelpDefinition: [{
        entity: {         name: 'ZVH_STATUS',
                           element: 'Status'},

@@ -2,23 +2,23 @@
 
 Na CDS View Base adicionar a seguite anotação no campo de usuário de criação:
 
-```abap
+```ABAP CDS
  @Semantics.user.createdBy: true   
 ```
 Na CDS View Base adicionar a seguite anotação no campo de usuário de modificação:
 
-```abap
+```ABAP CDS
 @Semantics.user.lastChangedBy: true    
 ```
 
 Na CDS View Base adicionar a seguite anotação sobre o campo de TimeStamp de criação:
 
-```abap
+```ABAP CDS
 @Semantics.systemDateTime.createdAt: true       
 ```  
 
 Na CDS View Base adicionar a seguite anotação sobre o campo de TimeStamp de modificação:
 
-```abap
+```ABAP CDS
 @Semantics.systemDateTime.lastChangedAt: true   
 ``` 
