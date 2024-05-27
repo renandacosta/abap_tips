@@ -38,6 +38,10 @@ Em seguida adicionar no campo que receberá a ajuda de pesquisa a anotação aba
 @Consumption.valueHelpDefinition: [{
        entity: {         name: 'ZVH_STATUS',
                           element: 'Status'},
-    useForValidation: true }
-    ]         
+    useForValidation: true,
+             useForValidation: true ,
+             additionalBinding: [
+          {   localElement: 'Centro',
+              element: 'Centro'
+          } ] } ]       
 ```    
