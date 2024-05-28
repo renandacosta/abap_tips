@@ -42,6 +42,7 @@ Em seguida adicionar no campo que receberá a ajuda de pesquisa a anotação aba
              useForValidation: true ,
              additionalBinding: [
           {   localElement: 'Descricao',
-              element: 'Descricao'
+              element: 'Descricao',
+              usage: #RESULT
           } ] } ]       
 ```    
