@@ -3,6 +3,7 @@
 Primeiro, deve-se cria uma CDS View que consuma a CDS View standard `I_DomainFixedValueText`.
 Adicionar na cláusula `WHERE` o nome do domínio que se deseja filtrar:
 
+
 ```ABAP CDS
 @AbapCatalog.viewEnhancementCategory: [#NONE]
 @AccessControl.authorizationCheck: #NOT_REQUIRED
